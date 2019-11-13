@@ -12,16 +12,28 @@ body {
     padding-right: 15px;
 }
 
-#grid{
-    display:grid;
-    grid-template-columns: 100px 100px 100px;
-    grid-template-rows: 1fr 1fr 1fr;
+.grid{
+    display: flex;
+    flex-direction: column;
 }
 
-.square {
-    border: 1px solid black;
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.board > row:nth-child(2){
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.board > row > .cell:nth-child(2){
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+.cell{
     width: 100px;
     height: 100px;
-    font-size: 90px;
-    text-align: "center"
+    font: 90px;
+    text-align: center;
 }
